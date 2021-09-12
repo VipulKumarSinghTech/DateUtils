@@ -3,3 +3,15 @@
 #  DateUtils Library
 A library used for performing operations on Date objects in java.
  
+---
+
+## Contributors
+- [Vipul Kumar Singh](https://github.com/vipul-kumar-singh) 
+
+---
+
+## License & Copyright
+
+© Vipul Kumar Singh
+
+Licensed under the [MIT License](LICENSE).
