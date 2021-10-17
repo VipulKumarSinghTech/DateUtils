@@ -2,6 +2,7 @@ package com.github.VipulKumarSinghTech;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.time.ZoneId;
 import java.util.Date;
 
@@ -16,5 +17,9 @@ public class DateUtils {
 
     public static Date convertToDate(LocalDateTime localDateTime, ZoneId zoneId) {
         return Date.from(localDateTime.atZone(zoneId).toInstant());
+    }
+
+    public static Date convertToDate(LocalDate localDate, LocalTime localTime, ZoneId zoneId) {
+        return Date.from(localTime.atDate(localDate).atZone(zoneId).toInstant());
     }
 }
