@@ -22,4 +22,8 @@ public class DateUtils {
     public static Date convertToDate(LocalDate localDate, LocalTime localTime, ZoneId zoneId) {
         return Date.from(localTime.atDate(localDate).atZone(zoneId).toInstant());
     }
+
+    public static Date convertToDate(LocalTime localTime, ZoneId zoneId) {
+        return convertToDate(LocalDate.now(), localTime, zoneId);
+    }
 }
