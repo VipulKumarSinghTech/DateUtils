@@ -26,4 +26,8 @@ public class DateUtils {
     public static Date convertToDate(LocalTime localTime, ZoneId zoneId) {
         return convertToDate(LocalDate.now(), localTime, zoneId);
     }
+
+    public static Date convertToDate(LocalDate localDate) {
+        return convertToDate(localDate, ZoneId.systemDefault());
+    }
 }
