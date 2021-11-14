@@ -34,4 +34,8 @@ public class DateUtils {
     public static Date convertToDate(LocalTime localTime) {
         return convertToDate(localTime, ZoneId.systemDefault());
     }
+
+    public static Date convertToDate(LocalDateTime localDateTime) {
+        return convertToDate(localDateTime, ZoneId.systemDefault());
+    }
 }
