@@ -1,5 +1,7 @@
 package com.github.VipulKumarSinghTech;
 
+import java.sql.Time;
+import java.sql.Timestamp;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -41,5 +43,17 @@ public class DateUtils {
 
     public static Date convertToDate(LocalDate localDate, LocalTime localTime) {
         return convertToDate(localDate, localTime, ZoneId.systemDefault());
+    }
+
+    public static Date convertToDate(java.sql.Date sqlDate) {
+        return new Date(sqlDate.getTime());
+    }
+
+    public static Date convertToDate(Time sqlTime) {
+        return new Date(sqlTime.getTime());
+    }
+
+    public static Date convertToDate(Timestamp sqlTimeStamp) {
+        return Date.from(sqlTimeStamp.toInstant());
     }
 }
