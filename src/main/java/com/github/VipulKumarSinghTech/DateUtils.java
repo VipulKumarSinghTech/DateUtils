@@ -2,6 +2,8 @@ package com.github.VipulKumarSinghTech;
 
 import java.sql.Time;
 import java.sql.Timestamp;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -55,5 +57,9 @@ public class DateUtils {
 
     public static Date convertToDate(Timestamp sqlTimeStamp) {
         return Date.from(sqlTimeStamp.toInstant());
+    }
+
+    public static Date convertToDate(String dateString, String dateFormat) throws ParseException {
+        return new SimpleDateFormat(dateFormat).parse(dateString);
     }
 }
