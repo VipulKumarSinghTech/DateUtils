@@ -72,12 +72,12 @@ public class DateUtils {
         return localDateTime.toLocalDate();
     }
 
-    public static LocalDateTime convertToLocalDateTime(Date date) {
-        return Instant.ofEpochMilli(date.getTime()).atZone(ZoneId.systemDefault()).toLocalDateTime();
-    }
-
     public static LocalDateTime convertToLocalDateTime(Date date, ZoneId zoneId) {
         return Instant.ofEpochMilli(date.getTime()).atZone(zoneId).toLocalDateTime();
+    }
+
+    public static LocalDateTime convertToLocalDateTime(Date date) {
+        return convertToLocalDateTime(date, ZoneId.systemDefault());
     }
 
     public static LocalDateTime convertToLocalDateTime(LocalDate localDate) {
